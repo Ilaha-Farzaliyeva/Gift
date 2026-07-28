@@ -17,3 +17,12 @@ export const verifyToken = (req, res, next) => {
         return res.status(401).json({ message: "Invalid or expired token" });
     }
 };
+
+
+export const validate = (schema) => (req, res, next) => {
+    const { error } = schema.validate(req.body);
+    if (error) {
+        return res.status(400).send(error.details[0].message);
+    }
+    next();
+};
