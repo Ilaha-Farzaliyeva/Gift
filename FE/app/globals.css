@@ -1,2 +1,14 @@
 @import "tailwindcss";
 
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #172554;
+    color:white;
+}
+.nav-links{
+    display: flex;
+    gap: 20px;
+}
